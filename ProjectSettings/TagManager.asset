@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 3
+  tags:
+  - portal1
+  - portal2
+  - portal3
+  - portal4
+  - portal5
+  - portal6
+  - portal7
+  - portal8
+  - portal9
+  - portal10
+  - portal11
+  - portal12
+  - portal13
+  - portal14
+  - portal15
+  - portal16
+  - portal17
+  - portal18
+  - portal19
+  - portal20
+  - portal21
+  - portal22
+  - portal23
+  - portal24
+  - portal25
+  - portal26
+  - portal27
+  - portal28
+  - portal29
+  - portal30
+  - portal31
+  - portal32
+  - enemigo
+  - limites
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - Layer 1
+  - Layer 2
+  - Layer 3
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Pasto
+    uniqueID: 2425651459
+    locked: 0
+  - name: Caminos
+    uniqueID: 4250941897
+    locked: 0
+  - name: Casas
+    uniqueID: 2060472683
+    locked: 0
+  - name: Player
+    uniqueID: 43630651
+    locked: 0
+  - name: Objetos
+    uniqueID: 1437766649
+    locked: 0
+  - name: Paredes
+    uniqueID: 4189426099
+    locked: 0
+  m_RenderingLayers:
+  - Default
