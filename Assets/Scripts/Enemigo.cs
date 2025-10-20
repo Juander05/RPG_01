@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
+<<<<<<< HEAD
 using UnityEngine.AI;
+=======
+>>>>>>> d5efb5890446f3df705c5f55a94a40a28ad2f687
 
 public class Enemigo : MonoBehaviour
 {
@@ -7,6 +10,7 @@ public class Enemigo : MonoBehaviour
 	public static int vidaEnemigo = 1;
 	private float frecAtaque = 2.5f, tiempoSigAtaque = 0, iniciaConteo;
 	
+<<<<<<< HEAD
 	public Transform personaje;
 	private NavMeshAgent agente;
 	public Transform[] puntosRuta;
@@ -52,11 +56,21 @@ public class Enemigo : MonoBehaviour
 			playerEnRango = false;
 		}
     	
+=======
+    void Start()
+    {
+	    vidaEnemigo = 1;
+    }
+
+    void Update()
+    {
+>>>>>>> d5efb5890446f3df705c5f55a94a40a28ad2f687
 	    if(tiempoSigAtaque > 0){
 	    	tiempoSigAtaque = frecAtaque + iniciaConteo - Time.time;
 	    } else{
 	    	tiempoSigAtaque = 0;
 	    	VidasPlayer.puedePerderVida = 1;
+<<<<<<< HEAD
 	    	SigueAlPlayer(playerEnRango);
 	    	RotaEnemigo();
 	    	ActualizaAnimacion();
@@ -107,6 +121,10 @@ public class Enemigo : MonoBehaviour
 			ultimaDireccion = new Vector2(movX, movY);
 		}
 	}
+=======
+	    }
+    }
+>>>>>>> d5efb5890446f3df705c5f55a94a40a28ad2f687
     
     
 	private void OnTriggerEnter2D(Collider2D obj){

@@ -36,8 +36,11 @@ TagManager:
   - portal30
   - portal31
   - portal32
+<<<<<<< HEAD
   - enemigo
   - limites
+=======
+>>>>>>> d5efb5890446f3df705c5f55a94a40a28ad2f687
   layers:
   - Default
   - TransparentFX
