@@ -10,9 +10,11 @@ public class CAD : MonoBehaviour
 	private Animator anim;
 	public static int dirDisparo = 0;
 	public static bool disparando = false;
+	private Inventario inventario;
 
     void Start(){
 	    anim = GetComponent<Animator>();
+	    inventario = FindObjectOfType<Inventario>();
     }
 
     void Update(){
@@ -25,10 +27,18 @@ public class CAD : MonoBehaviour
 	    }
 	    
 	    if(Input.GetButtonDown("Fire2") && tiempoSigAtaque <= 0){
-	    	disparando = true;
-	    	activaCapa("Ataque");
-	    	Dispara();
-	    	tiempoSigAtaque = tiempoEntreAtaques;
+	    	if (inventario.GetFlechas() > 0)
+	    	{
+		    	disparando = true;
+		    	activaCapa("Ataque");
+		    	Dispara();
+		    	tiempoSigAtaque = tiempoEntreAtaques;
+		    	//inventario.RestaFlechas(-1);
+	    	}
+	    	//disparando = true;
+	    	//activaCapa("Ataque");
+	    	//Dispara();
+	    	//tiempoSigAtaque = tiempoEntreAtaques;
 	    }
     }
     
@@ -51,8 +61,13 @@ public class CAD : MonoBehaviour
 	}
     
 	private void EmiteProyectil(){
-		dirDisparo = MovPlayer.dirAtaque;
-		Instantiate(proyectil, puntoEmision.position, transform.rotation);
+		if(inventario.UsarFlecha()) // Esto resta 1 flecha y actualiza la UI
+		{
+			dirDisparo = MovPlayer.dirAtaque;
+			Instantiate(proyectil, puntoEmision.position, transform.rotation);
+		}
+		//dirDisparo = MovPlayer.dirAtaque;
+		//Instantiate(proyectil, puntoEmision.position, transform.rotation);
 	}
     
 	private void activaCapa(string Nombre){

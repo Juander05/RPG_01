@@ -98,14 +98,14 @@ public class Enemigo : MonoBehaviour
 		animator.SetFloat("movY", movY);
 
 		// Determinamos si está en movimiento
-		bool estaCaminando = velocidad.magnitude > 0.05f;
-		animator.SetBool("isWalking", estaCaminando);
+		//bool estaCaminando = velocidad.magnitude > 0.05f;
+		//animator.SetBool("isWalking", estaCaminando);
 
 		// Guardamos la última dirección (opcional, si luego quieres idle mirando hacia una dirección)
-		if (estaCaminando)
-		{
-			ultimaDireccion = new Vector2(movX, movY);
-		}
+		//if (estaCaminando)
+		//{
+		//	ultimaDireccion = new Vector2(movX, movY);
+		//}
 	}
     
     

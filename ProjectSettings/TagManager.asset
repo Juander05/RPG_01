@@ -40,8 +40,11 @@ TagManager:
   - limites
   - vida
   - municion
-  - coleccionable1
-  - coleccionable2
+  - moneda
+  - gema1
+  - gema2
+  - gema3
+  - gema4
   layers:
   - Default
   - TransparentFX
