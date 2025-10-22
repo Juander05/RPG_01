@@ -38,6 +38,10 @@ TagManager:
   - portal32
   - enemigo
   - limites
+  - vida
+  - municion
+  - coleccionable1
+  - coleccionable2
   layers:
   - Default
   - TransparentFX
@@ -83,6 +87,9 @@ TagManager:
     locked: 0
   - name: Casas
     uniqueID: 2060472683
+    locked: 0
+  - name: Coleccionables
+    uniqueID: 3034186769
     locked: 0
   - name: Player
     uniqueID: 43630651
