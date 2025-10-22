@@ -79,17 +79,26 @@ TagManager:
   - name: Caminos
     uniqueID: 4250941897
     locked: 0
-  - name: Casas
-    uniqueID: 2060472683
-    locked: 0
   - name: Player
     uniqueID: 43630651
+    locked: 0
+  - name: enemigo
+    uniqueID: 1864844573
+    locked: 0
+  - name: Casas
+    uniqueID: 2060472683
     locked: 0
   - name: Objetos
     uniqueID: 1437766649
     locked: 0
   - name: Paredes
     uniqueID: 4189426099
+    locked: 0
+  - name: NPCs
+    uniqueID: 1209255795
+    locked: 0
+  - name: canvas
+    uniqueID: 3245996073
     locked: 0
   m_RenderingLayers:
   - Default
