@@ -6,6 +6,7 @@ public class ColeccionablesPlayer : MonoBehaviour
 	private GameObject player;
 	public static string objAColeccionar;
 	private Inventario inventario;
+	[SerializeField] private AudioClip sonidoVida;
 
     void Start()
 	{
@@ -19,6 +20,7 @@ public class ColeccionablesPlayer : MonoBehaviour
 			if(VidasPlayer.vida < 5){
 				VidasPlayer.vida++;
 				player.GetComponent<VidasPlayer>().DibujaVida(VidasPlayer.vida);
+				ControladorSonidos.Instance.EjecutarSonido(sonidoVida);
 				Destroy(obj.gameObject);
 			}
 			

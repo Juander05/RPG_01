@@ -18,6 +18,7 @@ public class Enemigo : MonoBehaviour
 	
 	private Animator animator;
 	private Vector2 ultimaDireccion;
+	[SerializeField] private AudioClip muerte;
 	
 	private void Awake(){
 		agente = GetComponent<NavMeshAgent>();
@@ -78,10 +79,10 @@ public class Enemigo : MonoBehaviour
 	private void RotaEnemigo(){
 		if(this.transform.position.x > mirarHacia.position.x){
 			spriteEnemigo.flipX = true;
-			Debug.Log("FlipX");
+			//Debug.Log("FlipX");
 		} else {
 			spriteEnemigo.flipX = false;
-			Debug.Log("Sin FlipX");
+			//Debug.Log("Sin FlipX");
 		}
 	}
 	
@@ -97,15 +98,6 @@ public class Enemigo : MonoBehaviour
 		animator.SetFloat("movX", movX);
 		animator.SetFloat("movY", movY);
 
-		// Determinamos si está en movimiento
-		//bool estaCaminando = velocidad.magnitude > 0.05f;
-		//animator.SetBool("isWalking", estaCaminando);
-
-		// Guardamos la última dirección (opcional, si luego quieres idle mirando hacia una dirección)
-		//if (estaCaminando)
-		//{
-		//	ultimaDireccion = new Vector2(movX, movY);
-		//}
 	}
     
     
@@ -121,6 +113,7 @@ public class Enemigo : MonoBehaviour
 		vidaEnemigo -= daño;
 		if(vidaEnemigo <= 0){
 			Destroy(gameObject);
+			ControladorSonidos.Instance.EjecutarSonido(muerte);
 		}
 	}
     

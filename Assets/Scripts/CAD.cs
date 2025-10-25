@@ -11,6 +11,7 @@ public class CAD : MonoBehaviour
 	public static int dirDisparo = 0;
 	public static bool disparando = false;
 	private Inventario inventario;
+	[SerializeField] private AudioClip disparoSonido;
 
     void Start(){
 	    anim = GetComponent<Animator>();
@@ -33,30 +34,30 @@ public class CAD : MonoBehaviour
 		    	activaCapa("Ataque");
 		    	Dispara();
 		    	tiempoSigAtaque = tiempoEntreAtaques;
-		    	//inventario.RestaFlechas(-1);
 	    	}
-	    	//disparando = true;
-	    	//activaCapa("Ataque");
-	    	//Dispara();
-	    	//tiempoSigAtaque = tiempoEntreAtaques;
+
 	    }
     }
     
 	void Dispara(){
 		if(MovPlayer.dirAtaque == 1){
 			anim.SetTrigger("ataqueDAbajo");
+			ControladorSonidos.Instance.EjecutarSonido(disparoSonido);
 		}
 		
 		if(MovPlayer.dirAtaque == 2){
 			anim.SetTrigger("ataqueDArriba");
+			ControladorSonidos.Instance.EjecutarSonido(disparoSonido);
 		}
 		
 		if(MovPlayer.dirAtaque == 3){
 			anim.SetTrigger("ataqueDIzquierda");
+			ControladorSonidos.Instance.EjecutarSonido(disparoSonido);
 		}
 		
 		if(MovPlayer.dirAtaque == 4){
 			anim.SetTrigger("ataqueDDerecha");
+			ControladorSonidos.Instance.EjecutarSonido(disparoSonido);
 		}	
 	}
     

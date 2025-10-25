@@ -45,6 +45,7 @@ public class VidasPlayer : MonoBehaviour
 	IEnumerator EjecutaMuerte(){
 		yield return new WaitForSeconds(1.2f);
 		gameOver.SetActive(true);
+		Time.timeScale = 0;
 	}
 
 }

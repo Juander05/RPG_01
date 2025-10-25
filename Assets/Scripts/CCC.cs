@@ -9,6 +9,7 @@ public class CCC : MonoBehaviour
 	public float tiempoEntreAtaques;
 	public float tiempoSigAtaque;
 	private Animator anim;
+	[SerializeField] private AudioClip golpeSonido;
 	
 	public static bool atacando;
 
@@ -37,18 +38,22 @@ public class CCC : MonoBehaviour
 	private void Golpe(){
 		if(MovPlayer.dirAtaque == 1){
 			anim.SetTrigger("ataqueFAbajo");
+			ControladorSonidos.Instance.EjecutarSonido(golpeSonido);
 		}
 		
 		if(MovPlayer.dirAtaque == 2){
 			anim.SetTrigger("ataqueFArriba");
+			ControladorSonidos.Instance.EjecutarSonido(golpeSonido);
 		}
 		
 		if(MovPlayer.dirAtaque == 3){
 			anim.SetTrigger("ataqueFIzquierda");
+			ControladorSonidos.Instance.EjecutarSonido(golpeSonido);
 		}
 		
 		if(MovPlayer.dirAtaque == 4){
 			anim.SetTrigger("ataqueFDerecha");
+			ControladorSonidos.Instance.EjecutarSonido(golpeSonido);
 		}
 	}
 	
