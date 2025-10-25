@@ -37,7 +37,7 @@ public class VidasPlayer : MonoBehaviour
 		}
 	}
 	
-	private void DibujaVida(int vida){
+	public void DibujaVida(int vida){
 		RectTransform transformaImagen = vidaPlayer.GetComponent<RectTransform>();
 		transformaImagen.sizeDelta = new Vector2(anchoVidasPlayer * (float)vida/(float)vidasINI, transformaImagen.sizeDelta.y);
 	}
@@ -45,6 +45,7 @@ public class VidasPlayer : MonoBehaviour
 	IEnumerator EjecutaMuerte(){
 		yield return new WaitForSeconds(1.2f);
 		gameOver.SetActive(true);
+		Time.timeScale = 0;
 	}
 
 }

@@ -36,6 +36,15 @@ TagManager:
   - portal30
   - portal31
   - portal32
+  - enemigo
+  - limites
+  - vida
+  - municion
+  - moneda
+  - gema1
+  - gema2
+  - gema3
+  - gema4
   layers:
   - Default
   - TransparentFX
@@ -81,6 +90,9 @@ TagManager:
     locked: 0
   - name: Casas
     uniqueID: 2060472683
+    locked: 0
+  - name: Coleccionables
+    uniqueID: 3034186769
     locked: 0
   - name: Player
     uniqueID: 43630651

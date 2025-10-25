@@ -13,10 +13,14 @@ public class MovPlayer : MonoBehaviour
 	private string capaCaminar = "Caminar";
 	private bool PlayerMoviendose = false;
 	private float ultimoMovX, ultimoMovY;
+	
+	public static int dirAtaque = 0;	// 1-Front, 2-Back, 3-Left, 4-Right
 
     void FixedUpdate(){
-        Movimiento();
-        AnimacionesPlayer();
+	    Movimiento();
+	    if(CCC.atacando == false && CAD.disparando == false){
+	    	AnimacionesPlayer();
+	    }
     }
 
     private void Movimiento(){
@@ -24,6 +28,22 @@ public class MovPlayer : MonoBehaviour
         float movY = Input.GetAxisRaw("Vertical");
         dirMov = new Vector2( movX, movY ).normalized;
 	    rb.linearVelocity = new Vector2 (dirMov.x * velMov ,dirMov.y * velMov);
+	    
+	    if(movX == -1){
+	    	dirAtaque = 3;
+	    }
+	    
+	    if(movX == 1){
+	    	dirAtaque = 4;
+	    }
+	    
+	    if(movY == -1){
+	    	dirAtaque = 1;
+	    }
+	    
+	    if(movY == 1){
+	    	dirAtaque = 2;
+	    }
         
 	    if(movX == 0 && movY == 0){		//Idle
 	    	PlayerMoviendose = false;
@@ -44,12 +64,16 @@ public class MovPlayer : MonoBehaviour
     }
     
 	private void ActualizaCapa(){
-		if(PlayerMoviendose){
-			ActivaCapa(capaCaminar);
-			Debug.Log("Caminando");
-		} else{
-			ActivaCapa(capaIdle);
-			Debug.Log("Idle");
+		if(CCC.atacando == false && CAD.disparando == false){
+			if(PlayerMoviendose){
+				ActivaCapa(capaCaminar);
+				Debug.Log("Caminando");
+			} else{
+				ActivaCapa(capaIdle);
+				Debug.Log("Idle");
+			}
+		} else {
+			ActivaCapa("Ataque");
 		}
 	}
 	
