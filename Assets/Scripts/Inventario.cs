@@ -6,6 +6,14 @@ public class Inventario : MonoBehaviour
 	
 	private bool muestraInventario;
 	public GameObject goInventario;
+	public GameObject portalBosque2;
+	public GameObject portalCementerio;
+	public GameObject portalEstatua;
+	public GameObject paredBosque2;
+	public GameObject paredCementerio;
+	public GameObject paredEstatua;
+	public GameObject zirko;
+		
 	[SerializeField] private string[] valoresInventario; //"" Sin elemento, string elemento
 	private int numMonedas, numFlechas;
 	Button boton; //Botones del inventario
@@ -63,10 +71,15 @@ public class Inventario : MonoBehaviour
 		switch (ColeccionablesPlayer.objAColeccionar){
 			case "gema1":
 				contenedor = Gema1;
+				zirko.SetActive(true);
+				portalBosque2.SetActive(true);
+				paredBosque2.SetActive(false);
 				break;
 				
 			case "gema2":
 				contenedor = Gema2;
+				portalCementerio.SetActive(true);
+				paredCementerio.SetActive(false);
 				break;
 				
 			case "gema3":
@@ -75,6 +88,8 @@ public class Inventario : MonoBehaviour
 				
 			case "gema4":
 				contenedor = Gema4;
+				portalEstatua.SetActive(true);
+				paredCementerio.SetActive(false);
 				break;
 				
 			case "moneda":

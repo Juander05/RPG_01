@@ -40,25 +40,19 @@ public class CAD : MonoBehaviour
     }
     
 	void Dispara(){
-		if(MovPlayer.dirAtaque == 1){
-			anim.SetTrigger("ataqueDAbajo");
-			ControladorSonidos.Instance.EjecutarSonido(disparoSonido);
-		}
 		
-		if(MovPlayer.dirAtaque == 2){
-			anim.SetTrigger("ataqueDArriba");
-			ControladorSonidos.Instance.EjecutarSonido(disparoSonido);
+		ControladorSonidos.Instance.EjecutarSonido(disparoSonido);
+
+		switch(MovPlayer.dirAtaque){
+		case 1: anim.SetTrigger("ataqueDAbajo"); break;
+		case 2: anim.SetTrigger("ataqueDArriba"); break;
+		case 3: anim.SetTrigger("ataqueDIzquierda"); break;
+		case 4: anim.SetTrigger("ataqueDDerecha"); break;
+		case 5: anim.SetTrigger("ataqueDArriba"); break;
+		case 6: anim.SetTrigger("ataqueDArriba"); break;
+		case 7: anim.SetTrigger("ataqueDAbajo"); break;
+		case 8: anim.SetTrigger("ataqueDAbajo"); break;
 		}
-		
-		if(MovPlayer.dirAtaque == 3){
-			anim.SetTrigger("ataqueDIzquierda");
-			ControladorSonidos.Instance.EjecutarSonido(disparoSonido);
-		}
-		
-		if(MovPlayer.dirAtaque == 4){
-			anim.SetTrigger("ataqueDDerecha");
-			ControladorSonidos.Instance.EjecutarSonido(disparoSonido);
-		}	
 	}
     
 	private void EmiteProyectil(){
@@ -67,8 +61,7 @@ public class CAD : MonoBehaviour
 			dirDisparo = MovPlayer.dirAtaque;
 			Instantiate(proyectil, puntoEmision.position, transform.rotation);
 		}
-		//dirDisparo = MovPlayer.dirAtaque;
-		//Instantiate(proyectil, puntoEmision.position, transform.rotation);
+
 	}
     
 	private void activaCapa(string Nombre){

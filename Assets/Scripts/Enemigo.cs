@@ -20,6 +20,8 @@ public class Enemigo : MonoBehaviour
 	private Vector2 ultimaDireccion;
 	[SerializeField] private AudioClip muerte;
 	
+	private VidasPlayer vidasPlayer;
+	
 	private void Awake(){
 		agente = GetComponent<NavMeshAgent>();
 		spriteEnemigo = GetComponent<SpriteRenderer>();
@@ -30,6 +32,7 @@ public class Enemigo : MonoBehaviour
 	    vidaEnemigo = 1;
 	    agente.updateRotation = false;
 	    agente.updateUpAxis = false;
+	    vidasPlayer = FindObjectOfType<VidasPlayer>();
     }
 
 	void Update(){
@@ -112,6 +115,10 @@ public class Enemigo : MonoBehaviour
 	public void TomarDaño(int daño){
 		vidaEnemigo -= daño;
 		if(vidaEnemigo <= 0){
+			if(vidasPlayer != null)
+			{
+				vidasPlayer.EnemyKilled();
+			}
 			Destroy(gameObject);
 			ControladorSonidos.Instance.EjecutarSonido(muerte);
 		}

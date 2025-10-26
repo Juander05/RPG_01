@@ -8,6 +8,7 @@ public class Navegacion : MonoBehaviour
 	public GameObject menuPrincipal;
 	public GameObject menuOpciones;
 	
+	
 	private bool muestraMenu;
 	public GameObject goMenu;
 	
@@ -20,7 +21,8 @@ public class Navegacion : MonoBehaviour
 		Debug.Log("El jugador ha salido del juego");
 	}
 	
-	public void Opciones(){
+	public void MenuPrincipal(){
+		Time.timeScale = 1;
 		SceneManager.LoadScene("Titulo 1");
 	}
 	

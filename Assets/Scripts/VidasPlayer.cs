@@ -15,6 +15,9 @@ public class VidasPlayer : MonoBehaviour
 	private const int vidasINI = 5;
 	public static int puedePerderVida = 1;
 	
+	public int kills = 0;
+	public Text killsText;
+	
     void Start()
     {
 	    anchoVidasPlayer = vidaPlayer.GetComponent<RectTransform>().sizeDelta.x;
@@ -47,5 +50,18 @@ public class VidasPlayer : MonoBehaviour
 		gameOver.SetActive(true);
 		Time.timeScale = 0;
 	}
+	
+	public void EnemyKilled()
+	{
+		kills++;
+		ActualizarKills(kills);
+	}
 
+	public void ActualizarKills(int kills)
+	{
+		if(killsText != null)
+			killsText.text = "X" + kills;
+	}
+	
+	
 }

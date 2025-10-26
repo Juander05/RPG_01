@@ -29,20 +29,29 @@ public class MovPlayer : MonoBehaviour
         dirMov = new Vector2( movX, movY ).normalized;
 	    rb.linearVelocity = new Vector2 (dirMov.x * velMov ,dirMov.y * velMov);
 	    
-	    if(movX == -1){
-	    	dirAtaque = 3;
+	    if (movX == -1 && movY == 1) {      //  arriba-izquierda
+		    dirAtaque = 5;
 	    }
-	    
-	    if(movX == 1){
-	    	dirAtaque = 4;
+	    else if (movX == 1 && movY == 1) {  //  arriba-derecha
+		    dirAtaque = 6;
 	    }
-	    
-	    if(movY == -1){
-	    	dirAtaque = 1;
+	    else if (movX == -1 && movY == -1) { //  abajo-izquierda
+		    dirAtaque = 7;
 	    }
-	    
-	    if(movY == 1){
-	    	dirAtaque = 2;
+	    else if (movX == 1 && movY == -1) {  //  abajo-derecha
+		    dirAtaque = 8;
+	    }
+	    else if (movX == -1) {
+		    dirAtaque = 3; // izquierda
+	    }
+	    else if (movX == 1) {
+		    dirAtaque = 4; // derecha
+	    }
+	    else if (movY == -1) {
+		    dirAtaque = 1; // abajo
+	    }
+	    else if (movY == 1) {
+		    dirAtaque = 2; // arriba
 	    }
         
 	    if(movX == 0 && movY == 0){		//Idle

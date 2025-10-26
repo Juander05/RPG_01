@@ -7,15 +7,22 @@ public class DisparaProyectil : MonoBehaviour
 	
 
 	void FixedUpdate(){
-		if(CAD.dirDisparo == 1){
-			transform.position += new Vector3 (0,-1,0) * Time.deltaTime * velocidad;
-		} else if(CAD.dirDisparo == 2){
-			transform.position += new Vector3 (0,1,0) * Time.deltaTime * velocidad;
-		} else if(CAD.dirDisparo == 3){
-			transform.position += new Vector3 (-1,0,0) * Time.deltaTime * velocidad;
-		} else if(CAD.dirDisparo == 4){
-			transform.position += new Vector3 (1,0,0) * Time.deltaTime * velocidad;
+		
+		Vector3 dir = Vector3.zero;
+
+		switch(CAD.dirDisparo){
+		case 1: dir = new Vector3(0, -1, 0); break;   // Abajo
+		case 2: dir = new Vector3(0, 1, 0); break;    // Arriba
+		case 3: dir = new Vector3(-1, 0, 0); break;   // Izquierda
+		case 4: dir = new Vector3(1, 0, 0); break;    // Derecha
+		case 5: dir = new Vector3(-1, 1, 0).normalized; break;  //  Arriba-Izquierda
+		case 6: dir = new Vector3(1, 1, 0).normalized; break;   //  Arriba-Derecha
+		case 7: dir = new Vector3(-1, -1, 0).normalized; break; //  Abajo-Izquierda
+		case 8: dir = new Vector3(1, -1, 0).normalized; break;  //  Abajo-Derecha
 		}
+
+		transform.position += dir * Time.deltaTime * velocidad;
+
 	}
     
 	private void OnTriggerEnter2D(Collider2D collision){

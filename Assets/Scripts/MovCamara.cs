@@ -4,6 +4,8 @@ public class MovCamara : MonoBehaviour
 {
 	
 	public Camera camara;
+	public GameObject orin;
+	public GameObject zirko;
 
 	public void OnTriggerEnter2D(Collider2D obj){
 		
@@ -13,6 +15,7 @@ public class MovCamara : MonoBehaviour
 			camara.transform.position = posicioncamara;
 			Vector3 posicionPlayer = new Vector3 (0,12,0);
 			this.transform.position = posicionPlayer;
+			orin.SetActive(false);
 		}
 		
 		//Portal pueblo-spawn
@@ -190,6 +193,7 @@ public class MovCamara : MonoBehaviour
 			camara.transform.position = posicioncamara;
 			Vector3 posicionPlayer = new Vector3 (-15.5f,23.2f,0);
 			this.transform.position = posicionPlayer;
+			zirko.SetActive(false);
 		}
 		
 		//Portal bosque2P1-pueblo
