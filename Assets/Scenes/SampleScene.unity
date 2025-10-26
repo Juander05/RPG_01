@@ -661,18 +661,18 @@ PrefabInstance:
     - target: {fileID: 477352825040970897, guid: 0e995b43b344c344cbada5ba56cba5ff,
         type: 3}
       propertyPath: 'LineasDialogo.Array.data[7]'
-      value: "Sigue bajando y encontraras el cristal, pero recuerda lo que eres.\r"
+      value: "Rok: Sigue bajando y encontraras el cristal, pero recuerda lo que eres.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 477352825040970897, guid: 0e995b43b344c344cbada5ba56cba5ff,
         type: 3}
       propertyPath: 'LineasDialogo.Array.data[8]'
-      value: "Cuando obtengas el cristal ve al cementerio, all\xED encontraras el
-        ultimo cristal.\r"
+      value: "Rok: Cuando obtengas el cristal ve al cementerio, all\xED encontraras
+        el ultimo cristal.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 477352825040970897, guid: 0e995b43b344c344cbada5ba56cba5ff,
         type: 3}
       propertyPath: 'LineasDialogo.Array.data[9]'
-      value: "El cementerio esta al sur del primer bosque que visitaste.\r"
+      value: "Rok: El cementerio esta al sur del primer bosque que visitaste.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 1134684905855851070, guid: 0e995b43b344c344cbada5ba56cba5ff,
         type: 3}
@@ -95044,7 +95044,8 @@ PrefabInstance:
     - target: {fileID: 477352825040970897, guid: 0e995b43b344c344cbada5ba56cba5ff,
         type: 3}
       propertyPath: 'LineasDialogo.Array.data[5]'
-      value: "Recoge el crsital y ve al norte del pueblo, Orin te espera all\xED."
+      value: "Esp\xEDritu: Recoge el crsital y ve al norte del pueblo, Orin te espera
+        all\xED."
       objectReference: {fileID: 0}
     - target: {fileID: 1134684905855851070, guid: 0e995b43b344c344cbada5ba56cba5ff,
         type: 3}
