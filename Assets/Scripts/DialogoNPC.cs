@@ -23,23 +23,6 @@ public class DialogoNPC : MonoBehaviour
 
     void Update()
     {
-	    /*if(isplayerInRange && Input.GetButtonDown("Fire1"))
-        {
-            if(!didDialogueStart)
-            {
-                StartDialogue();
-            }
-            else if(DialogoTexto.text == LineasDialogo[lineIndex])
-            {
-                SiguienteLinea();
-            }
-            else
-            {
-                StopAllCoroutines();
-                DialogoTexto.text = LineasDialogo[lineIndex];
-            }
-
-	    }*/
 	    
 	    if (isplayerInRange && Input.GetButtonDown("Fire1"))
 	    {
@@ -66,7 +49,7 @@ public class DialogoNPC : MonoBehaviour
         PanelDeDialogo.SetActive(true);
         MarcaDeDialogo.SetActive(false);
 	    lineIndex = 0;
-	    // 🔹 Selecciona el diálogo según las visitas
+	    // Selecciona el diálogo según las visitas
 	    if (visitas == 0)
 		    lineasActuales = LineasDialogo;
 	    else if (visitas == 1)
