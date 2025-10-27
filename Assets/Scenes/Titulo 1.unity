@@ -1204,6 +1204,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuPrincipal: {fileID: 206795044}
   menuOpciones: {fileID: 1111813006}
+  goMenu: {fileID: 0}
 --- !u!1 &673654889
 GameObject:
   m_ObjectHideFlags: 0
