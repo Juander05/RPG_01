@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 using TMPro;
 
@@ -7,17 +7,23 @@ public class DialogoNPC : MonoBehaviour
     [SerializeField] private GameObject MarcaDeDialogo;
     [SerializeField] private GameObject PanelDeDialogo;
     [SerializeField] private TMP_Text DialogoTexto;
-    [SerializeField, TextArea(4,6)]  private string[] LineasDialogo;
+	[SerializeField, TextArea(4,6)]  private string[] LineasDialogo;
+	[SerializeField, TextArea(4,6)]  private string[] LineasDialogo1;
+	[SerializeField, TextArea(4,6)]  private string[] LineasDialogo2;
+	
+	private string[] lineasActuales;
 
     private float typingTime = 0.05f;
 
     private bool isplayerInRange;
     private bool didDialogueStart;
-    private  int lineIndex;
+	private  int lineIndex;
+    
+	private int visitas = 0;
 
     void Update()
     {
-        if(isplayerInRange && Input.GetButtonDown("Fire1"))
+	    /*if(isplayerInRange && Input.GetButtonDown("Fire1"))
         {
             if(!didDialogueStart)
             {
@@ -33,7 +39,24 @@ public class DialogoNPC : MonoBehaviour
                 DialogoTexto.text = LineasDialogo[lineIndex];
             }
 
-        }
+	    }*/
+	    
+	    if (isplayerInRange && Input.GetButtonDown("Fire1"))
+	    {
+		    if (!didDialogueStart)
+		    {
+			    StartDialogue();
+		    }
+		    else if (DialogoTexto.text == lineasActuales[lineIndex])
+		    {
+			    SiguienteLinea();
+		    }
+		    else
+		    {
+			    StopAllCoroutines();
+			    DialogoTexto.text = lineasActuales[lineIndex];
+		    }
+	    }
     }
 
 
@@ -42,7 +65,16 @@ public class DialogoNPC : MonoBehaviour
         didDialogueStart = true;
         PanelDeDialogo.SetActive(true);
         MarcaDeDialogo.SetActive(false);
-        lineIndex = 0;
+	    lineIndex = 0;
+	    // 🔹 Selecciona el diálogo según las visitas
+	    if (visitas == 0)
+		    lineasActuales = LineasDialogo;
+	    else if (visitas == 1)
+		    lineasActuales = LineasDialogo1;
+	    else
+		    lineasActuales = LineasDialogo2;
+
+	    visitas++;
         Time.timeScale = 0f;
         StartCoroutine(ShowLine());
 
@@ -51,7 +83,7 @@ public class DialogoNPC : MonoBehaviour
 
     private void SiguienteLinea() {
         lineIndex++;
-        if(lineIndex < LineasDialogo.Length)
+	    if(lineIndex < lineasActuales.Length)
         {
             StartCoroutine(ShowLine());
         }
@@ -67,7 +99,7 @@ public class DialogoNPC : MonoBehaviour
     {
         DialogoTexto.text = string.Empty;
 
-        foreach(char ch in LineasDialogo[lineIndex])
+	    foreach(char ch in lineasActuales[lineIndex])
         {
             DialogoTexto.text += ch;
             yield return new WaitForSecondsRealtime(typingTime);

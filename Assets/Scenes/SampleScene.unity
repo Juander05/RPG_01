@@ -451,6 +451,15 @@ MonoBehaviour:
   - "Player: Entonces si las encuentro, puedo arreglar todo?\r"
   - "Lyra: Exacto. Empieza con la granja de piedras, aunque el due\xF1o\u2026 bueno,
     no es muy normal."
+  LineasDialogo1:
+  - "Lyra: \xBFHablaste con Brom? Espero que no te haya ofrecido \u201Cadoptar una
+    piedra\u201D."
+  - "Player: S\xED\u2026 lo hizo."
+  - "Lyra: Suspiro\u2026 al menos intenta no romper su ilusi\xF3n. Es de los pocos
+    que todav\xEDa sonr\xEDen aqu\xED."
+  LineasDialogo2:
+  - "Lyra: Si necesitas ayuda, recuerda: los cristales restaurar\xE1n el altar. \xA1Y
+    evita hacer enojar a Brom, sus piedras son vengativas!"
 --- !u!61 &16727654
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -623,6 +632,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 477352825040970897, guid: 0e995b43b344c344cbada5ba56cba5ff,
         type: 3}
+      propertyPath: LineasDialogo1.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 477352825040970897, guid: 0e995b43b344c344cbada5ba56cba5ff,
+        type: 3}
+      propertyPath: LineasDialogo2.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 477352825040970897, guid: 0e995b43b344c344cbada5ba56cba5ff,
+        type: 3}
       propertyPath: 'LineasDialogo.Array.data[0]'
       value: "Rok: Alto ah\xED. No me obligues a atacarte."
       objectReference: {fileID: 0}
@@ -673,6 +692,18 @@ PrefabInstance:
         type: 3}
       propertyPath: 'LineasDialogo.Array.data[9]'
       value: "Rok: El cementerio esta al sur del primer bosque que visitaste.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 477352825040970897, guid: 0e995b43b344c344cbada5ba56cba5ff,
+        type: 3}
+      propertyPath: 'LineasDialogo1.Array.data[0]'
+      value: "Rok: A\xFAn sigues por aqu\xED\u2026 No todos los humanos se detienen
+        a hablar. Quiz\xE1s haya esperanza para ustedes."
+      objectReference: {fileID: 0}
+    - target: {fileID: 477352825040970897, guid: 0e995b43b344c344cbada5ba56cba5ff,
+        type: 3}
+      propertyPath: 'LineasDialogo2.Array.data[0]'
+      value: "Rok: Cuida esos cristales. Son m\xE1s peligrosos de lo que parecen,
+        incluso cuando brillan bonito."
       objectReference: {fileID: 0}
     - target: {fileID: 1134684905855851070, guid: 0e995b43b344c344cbada5ba56cba5ff,
         type: 3}
@@ -19454,6 +19485,14 @@ MonoBehaviour:
   - "Orin: Pues\u2026 el mundo sigue hecho un desastre, los demonios siguen haciendo
     de las suyas, y yo me muero de aburrimiento. \xA1Mu\xE9vete!"
   - Ve al pueblo y ayuda a los aldeanos.
+  LineasDialogo1:
+  - "Orin: \xBFA\xFAn aqu\xED? El norte sigue estando en la misma direcci\xF3n, \xBFeh?"
+  - "Player: Solo quer\xEDa repasar el plan."
+  - "Orin: F\xE1cil: ve al pueblo, ayuda, salva el mundo. Y si puedes, tr\xE1eme
+    algo de comer. No recuerdo la \xFAltima vez que vi un desayuno."
+  LineasDialogo2:
+  - "Orin: Ya te lo dije, muchacho: el norte, el pueblo, y menos drama. \xA1Vamos,
+    que el destino no se arregla solo!"
 --- !u!61 &339282297
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -66787,6 +66826,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 477352825040970897, guid: 0e995b43b344c344cbada5ba56cba5ff,
         type: 3}
+      propertyPath: LineasDialogo1.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 477352825040970897, guid: 0e995b43b344c344cbada5ba56cba5ff,
+        type: 3}
+      propertyPath: LineasDialogo2.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 477352825040970897, guid: 0e995b43b344c344cbada5ba56cba5ff,
+        type: 3}
       propertyPath: 'LineasDialogo.Array.data[0]'
       value: "Zirko: \xA1Hey, t\xFA! S\xED, t\xFA, el de la cara confundida."
       objectReference: {fileID: 0}
@@ -66875,6 +66924,29 @@ PrefabInstance:
       value: "Zirko: De nada, humano amn\xE9sico. Si logras arreglar este desastre,
         av\xEDsame\u2026 as\xED me largo antes de que el mundo vuelva a ser aburrido."
       objectReference: {fileID: 0}
+    - target: {fileID: 477352825040970897, guid: 0e995b43b344c344cbada5ba56cba5ff,
+        type: 3}
+      propertyPath: 'LineasDialogo1.Array.data[0]'
+      value: "Zirko: \xBFA\xFAn por aqu\xED? Pens\xE9 que ya estar\xEDas recogiendo
+        le\xF1a de esos troncos vivientes."
+      objectReference: {fileID: 0}
+    - target: {fileID: 477352825040970897, guid: 0e995b43b344c344cbada5ba56cba5ff,
+        type: 3}
+      propertyPath: 'LineasDialogo1.Array.data[1]'
+      value: 'Player: Voy en camino.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 477352825040970897, guid: 0e995b43b344c344cbada5ba56cba5ff,
+        type: 3}
+      propertyPath: 'LineasDialogo1.Array.data[2]'
+      value: "Zirko: Genial. Si ves un demonio cabez\xF3n, m\xE1ndale saludos de
+        mi parte."
+      objectReference: {fileID: 0}
+    - target: {fileID: 477352825040970897, guid: 0e995b43b344c344cbada5ba56cba5ff,
+        type: 3}
+      propertyPath: 'LineasDialogo2.Array.data[0]'
+      value: "Zirko: Oeste para el segundo cristal, norte para el tercero. No me
+        hagas repetirlo o empiezo a cobrar gu\xEDa tur\xEDstica."
+      objectReference: {fileID: 0}
     - target: {fileID: 1134684905855851070, guid: 0e995b43b344c344cbada5ba56cba5ff,
         type: 3}
       propertyPath: m_Name
@@ -66905,6 +66977,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2976924748586066254, guid: 0e995b43b344c344cbada5ba56cba5ff,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2976924748586066254, guid: 0e995b43b344c344cbada5ba56cba5ff,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2976924748586066254, guid: 0e995b43b344c344cbada5ba56cba5ff,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2976924748586066254, guid: 0e995b43b344c344cbada5ba56cba5ff,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 4242602903640290449, guid: 0e995b43b344c344cbada5ba56cba5ff,
         type: 3}
@@ -66965,6 +67057,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7822112536826579744, guid: 0e995b43b344c344cbada5ba56cba5ff,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7822112536826579744, guid: 0e995b43b344c344cbada5ba56cba5ff,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7822112536826579744, guid: 0e995b43b344c344cbada5ba56cba5ff,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7822112536826579744, guid: 0e995b43b344c344cbada5ba56cba5ff,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -87728,6 +87840,12 @@ MonoBehaviour:
   - "Orin: S\xED. Intentaste crear un mundo perfecto\u2026 y abriste el abismo. Pero
     al menos tu arrepentimiento fue real."
   - "Player: Entonces, terminar\xE9 lo que empec\xE9.\r\n"
+  LineasDialogo1:
+  - "Orin: Los cristales no se colocar\xE1n solos, \xBFsabes? Vamos, h\xE9roe accidental,
+    el mundo no va a esperar."
+  LineasDialogo2:
+  - "Orin: El fin de algo es solo el comienzo de otro. Pero no te emociones, no pienso
+    darte otra misi\xF3n."
 --- !u!61 &1514699716
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -88252,6 +88370,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 477352825040970897, guid: 0e995b43b344c344cbada5ba56cba5ff,
         type: 3}
+      propertyPath: LineasDialogo1.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 477352825040970897, guid: 0e995b43b344c344cbada5ba56cba5ff,
+        type: 3}
+      propertyPath: LineasDialogo2.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 477352825040970897, guid: 0e995b43b344c344cbada5ba56cba5ff,
+        type: 3}
       propertyPath: 'LineasDialogo.Array.data[0]'
       value: "Brom: \xA1Eh! \xA1No pises mis piedras!"
       objectReference: {fileID: 0}
@@ -88298,6 +88426,18 @@ PrefabInstance:
         cristal.
 
 '
+      objectReference: {fileID: 0}
+    - target: {fileID: 477352825040970897, guid: 0e995b43b344c344cbada5ba56cba5ff,
+        type: 3}
+      propertyPath: 'LineasDialogo1.Array.data[0]'
+      value: "Brom: \xBFYa recuperaste mi piedra? Es redonda, brillante y te mira
+        si la observas mucho rato. \xA1Una joya de car\xE1cter fuerte!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 477352825040970897, guid: 0e995b43b344c344cbada5ba56cba5ff,
+        type: 3}
+      propertyPath: 'LineasDialogo2.Array.data[0]'
+      value: "Brom: Mis piedras y yo te apoyamos moralmente. Bueno, ellas m\xE1s
+        que yo."
       objectReference: {fileID: 0}
     - target: {fileID: 1134684905855851070, guid: 0e995b43b344c344cbada5ba56cba5ff,
         type: 3}
@@ -95235,6 +95375,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 477352825040970897, guid: 0e995b43b344c344cbada5ba56cba5ff,
         type: 3}
+      propertyPath: LineasDialogo1.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 477352825040970897, guid: 0e995b43b344c344cbada5ba56cba5ff,
+        type: 3}
+      propertyPath: LineasDialogo2.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 477352825040970897, guid: 0e995b43b344c344cbada5ba56cba5ff,
+        type: 3}
       propertyPath: 'LineasDialogo.Array.data[0]'
       value: "Esp\xEDritu: Has llegado lejos,Mago."
       objectReference: {fileID: 0}
@@ -95265,6 +95415,18 @@ PrefabInstance:
       propertyPath: 'LineasDialogo.Array.data[5]'
       value: "Esp\xEDritu: Recoge el crsital y ve al norte del pueblo, Orin te espera
         all\xED."
+      objectReference: {fileID: 0}
+    - target: {fileID: 477352825040970897, guid: 0e995b43b344c344cbada5ba56cba5ff,
+        type: 3}
+      propertyPath: 'LineasDialogo1.Array.data[0]'
+      value: "Esp\xEDritu: Cada alma aqu\xED susurra tu nombre. Pero esta vez, lo
+        hacen con esperanza, no con miedo."
+      objectReference: {fileID: 0}
+    - target: {fileID: 477352825040970897, guid: 0e995b43b344c344cbada5ba56cba5ff,
+        type: 3}
+      propertyPath: 'LineasDialogo2.Array.data[0]'
+      value: "Esp\xEDritu: El altar te espera, redentor. No dejes que la duda te
+        detenga otra vez."
       objectReference: {fileID: 0}
     - target: {fileID: 1134684905855851070, guid: 0e995b43b344c344cbada5ba56cba5ff,
         type: 3}
